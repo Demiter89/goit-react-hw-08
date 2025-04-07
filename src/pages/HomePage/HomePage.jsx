@@ -1,7 +1,9 @@
+// src/pages/HomePage.jsx
+
 const HomePage = () => {
   return (
-    <div>
-      <h1>Welcome to Contact Book App</h1>
+    <div className="container">
+      <h1>📖 Contact Book App</h1>
       <p>Manage your contacts easily and securely.</p>
     </div>
   );

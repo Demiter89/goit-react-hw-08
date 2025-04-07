@@ -1,21 +1,23 @@
 // src/components/SharedLayout/SharedLayout.jsx
-import { Outlet } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 
-export default function SharedLayout() {
+import { NavLink, Outlet } from 'react-router-dom';
+
+const SharedLayout = () => {
   return (
-    <div>
-      <header>
-        <nav>
+    <>
+      <header style={{ padding: '1rem', backgroundColor: '#1f1f1f' }}>
+        <nav style={{ display: 'flex', gap: '1rem' }}>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/register">Register</NavLink>
           <NavLink to="/login">Login</NavLink>
-          <NavLink to="/contacts">Contacts</NavLink>
+
         </nav>
       </header>
       <main>
         <Outlet />
       </main>
-    </div>
+    </>
   );
-}
+};
+
+export default SharedLayout;
