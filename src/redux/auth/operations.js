@@ -3,10 +3,12 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'https://connections-api.goit.global';
 
+// Установлення токена
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
 
+// Очищення токена
 const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = '';
 };
