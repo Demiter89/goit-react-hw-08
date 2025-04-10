@@ -13,8 +13,6 @@ const filtersSlice = createSlice({
 });
 
 export const { setNameFilter } = filtersSlice.actions;
-
-// ✅ Селектор
 export const selectNameFilter = state => state.filters.name;
 
 export default filtersSlice.reducer;

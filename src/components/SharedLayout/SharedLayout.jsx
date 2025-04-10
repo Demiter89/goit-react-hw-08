@@ -1,22 +1,14 @@
-// src/components/SharedLayout/SharedLayout.jsx
-
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import AppBar from '../AppBar/AppBar'; // ✅ Імпорт AppBar
 
 const SharedLayout = () => {
   return (
-    <>
-      <header style={{ padding: '1rem', backgroundColor: '#1f1f1f' }}>
-        <nav style={{ display: 'flex', gap: '1rem' }}>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/register">Register</NavLink>
-          <NavLink to="/login">Login</NavLink>
-
-        </nav>
-      </header>
+    <div>
+      <AppBar /> {/* ✅ Додаємо AppBar */}
       <main>
         <Outlet />
       </main>
-    </>
+    </div>
   );
 };
 
